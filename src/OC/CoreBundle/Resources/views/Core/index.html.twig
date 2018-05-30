@@ -1,0 +1,76 @@
+{# On utilise ici le layout général, qui se situe dans ce même CoreBundle maintenant #}
+{% extends "OCPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+    Page d'accueil - {{ parent() }}
+{% endblock %}
+
+{% block body %}
+&nbsp
+    <div class="row" style="background-image:url('https://images.parents.mdpcdn.com/sites/parents.com/files/styles/scale_1500_1500/public/sized_shutterstock_308426864.jpg'); background-repeat: no-repeat; background-size: 100%; ">
+        <div class="col-md-1">
+            <!-- empty space -->
+        </div>
+        <div class="col-md-10 text-center">
+            &nbsp
+            <h1>Bubble</h1>
+            <p class="lead ">Vous voulez garder un enfant ou faire garder le vôtre ? Vous êtes au bon endroit !</p>
+            <p class="lead ">Bubble met en relations des particuliers et professionels de la garde d'enfants avec les parents !</p>
+            <hr>
+        </div>
+        <div class="col-md-1">
+            <!-- empty space -->
+        </div>
+
+        <div class="col-md-2">
+            <!-- empty space -->
+        </div>
+        <div class="col-md-8 text-center">
+
+            &nbsp
+            <h2>Vous cherchez une garde ? C'est ici !</h2>
+                
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Je cherche : </span>
+                    <select class="combobox form-control">
+                        <option value="pi">Peu importe</option>
+                        <option value="nou">Nourrice</option>
+                        <option value="bs">BabySitter</option>
+                        <option value="gd">Des enfants à garder</option>
+                    </select>
+                </div>
+
+                <input type="text" class="form-control" aria-label="Où ?" placeholder="Où ?">
+                <input type="text" class="form-control" aria-label="Quand ?" placeholder="Quand ?">
+                <div class="input-group-append">
+                    <a href="{{ path('fos_user_registration_register') }}"><button type="button" class="btn btn-success">Rechercher</button></a>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+        <div class="col-md-2">
+            <!-- empty space -->
+        </div>
+
+        <div class="col-lg-6">
+            <div class="jumbotron" style="opacity: 0.8">
+                <h2>Challenge !</h2>
+                <p>Mon deuxième article ! Je vous annonce la création d'une jolie première page ! Toute belle pour le Challenge ! </p>
+                <p><a class="btn btn-success" href="#" role="button">Lire plus &raquo;</a></p>
+            </div>
+
+        </div>
+        <div class="col-lg-6" >
+            <div class="jumbotron" style="opacity: 0.8">
+                <h2>Le début d'une aventure !</h2>
+                <p>Voici mon premier article ! Il n'est peut être pas très grand, mais c'est un début. J'espère pouvoir commencer une grande aventure avec vous!</p>
+                <p><a class="btn btn-success" href="#" role="button">Lire plus &raquo;</a></p>
+            </div>
+        </div>
+
+        </div>
+
+{% endblock %}
+

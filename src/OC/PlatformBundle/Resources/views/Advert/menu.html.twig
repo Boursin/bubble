@@ -1,0 +1,18 @@
+{# src/OC/PlatformBundle/Resources/views/Advert/menu.html.twig #}
+
+{# Ce template n'hérite de personne,
+   tout comme le template inclus avec {{ include() }}. #}
+
+<div class="row">
+    {% for advert in listAdverts %}
+        <div class="col-lg-12">
+            <h3><a href="{{ path('oc_platform_view', {'id': advert.id}) }}">{{ advert.title }}</a></h3>
+                <p>Publié par : {{ advert.author }}</p>
+                <p>{{ advert.content }}</p>
+            <p><a class="btn btn-primary"  href="{{ path('oc_platform_view', {'id': advert.id}) }}" role="button">Détails &raquo;</a></p>
+
+        </div>
+    {% endfor %}
+</div>
+
+
