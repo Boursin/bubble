@@ -14,6 +14,16 @@
             </div>
             <div class="form-group" id="fos_user_registration_form">
                 <div class="form-group">
+                    {{ form_label(form.firstname) }}
+                    {{ form_widget(form.firstname, { 'attr': {'class': 'form-control', 'placeholder': 'Firstname'|trans } }) }}
+                    {{ form_errors(form.firstname) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.lastname) }}
+                    {{ form_widget(form.lastname, { 'attr': {'class': 'form-control', 'placeholder': 'Lastname'|trans } }) }}
+                    {{ form_errors(form.lastname) }}
+                </div>
+                <div class="form-group">
                     {{ form_label(form.email) }}
                     {{ form_widget(form.email, { 'attr': {'class': 'form-control', 'placeholder': 'form.email'|trans } }) }}
                     {{ form_errors(form.email) }}
@@ -22,6 +32,11 @@
                     {{ form_label(form.username) }}
                     {{ form_widget(form.username, { 'attr': {'class': 'form-control', 'placeholder': 'form.username'|trans } }) }}
                     {{ form_errors(form.username) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.postcode) }}
+                    {{ form_widget(form.postcode, { 'attr': {'class': 'form-control', 'placeholder': 'Postcode'|trans } }) }}
+                    {{ form_errors(form.postcode) }}
                 </div>
                 <div class="form-group">
                     {{ form_label(form.plainPassword.first) }}
