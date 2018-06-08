@@ -3,8 +3,15 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
 {% block fos_user_content %}
-    <p>{{ 'registration.confirmed'|trans({'%username%': user.username}) }}</p>
-    {% if targetUrl %}
-    <p><a href="{{ targetUrl }}">{{ 'registration.back'|trans }}</a></p>
-    {% endif %}
+    <div class="row justify-content-center" style="margin-top: 10px;">
+        <div class="jumbotron text-center">
+            <img src="http://pluspng.com/img-png/png-tick-png-check-correct-mark-success-tick-valid-yes-icon-download-svg-download-png-512.png" style="max-width:256px;">
+            <p>{{ 'registration.confirmed'|trans({'%username%': user.username}) }}</p>
+            <p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p>
+            <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
+            <p><a href="/logout">{{ 'layout.logout'|trans }}</a> or <a href="/profile">{{ 'Show Profile'|trans }}</a></p>
+        </div>
+
+    </div>
+
 {% endblock fos_user_content %}

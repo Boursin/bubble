@@ -32,4 +32,14 @@ class CoreController extends Controller
 
         // La méthode longue new RedirectResponse($this->get('router')->generate('oc_core_home')); est parfaitement valable
     }
+
+    // La page d'accueil
+    public function cguAction()
+    {
+        // On retourne simplement la vue de la page d'accueil
+        // L'affichage des 3 dernières annonces utilisera le contrôleur déjà existant dans PlatformBundle
+        return $this->render('OCCoreBundle:Core:cgu.html.twig');
+
+        // La méthode longue $this->get('templating')->renderResponse('...') est parfaitement valable
+    }
 }

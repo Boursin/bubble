@@ -17,6 +17,34 @@
 </head>
 
 <body>
+{% if app.user != null %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="{{ path('oc_core_home') }}">Bubble</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+    </ul>
+
+
+    <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <b>Utilisateur : {{ app.user.username }}</b>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="/profile">Profil</a>
+                <a class="dropdown-item" href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
+            </div>
+        </li>
+    </ul>
+
+
+</nav>
+{% endif %}
 
     <div class="container-fluid" >
         {# On affiche les messages flash que définissent les contrôleurs du bundle #}

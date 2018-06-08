@@ -9,3 +9,8 @@ oc_core_contact:
     path: /contact
     defaults:
         _controller: OCCoreBundle:Core:contact
+
+oc_core_cgu:
+    path: /cgu
+    defaults:
+        _controller: OCCoreBundle:Core:cgu

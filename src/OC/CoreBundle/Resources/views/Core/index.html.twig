@@ -6,6 +6,14 @@
 {% endblock %}
 
 {% block body %}
+    {# On affiche les messages flash que définissent les contrôleurs du bundle #}
+    {% for key, messages in app.session.flashbag.all() %}
+        {% for message in messages %}
+            <div class="alert alert-{{ key }}">
+                {{ message|trans({}, 'FOSUserBundle') }}
+            </div>
+        {% endfor %}
+    {% endfor %}
 &nbsp
     <div class="row" style="background-image:url('https://images.parents.mdpcdn.com/sites/parents.com/files/styles/scale_1500_1500/public/sized_shutterstock_308426864.jpg'); background-repeat: no-repeat; background-size: 100%; ">
         <div class="col-md-1">
@@ -28,11 +36,18 @@
         <div class="col-md-8 text-center">
 
             &nbsp
-            <h2>Vous cherchez une garde ? C'est ici !</h2>
-            <a href="{{ path('fos_user_registration_register') }}"><button type="button" class="btn btn-success">Je m'inscris !</button></a>
+            {% if app.user != null %}
+                <h1>Bonjour {{ app.user.username  }} ! Ravi de vous revoir !</h1>
+            {% else %}
+                <h2>Vous cherchez une garde ? C'est ici !</h2>
+                <a href="/login"><button type="button" class="btn btn-success btn-lg">Je me connecte !</button></a>
+                OU
+                <a href="{{ path('fos_user_registration_register') }}"><button type="button" class="btn btn-success btn-lg">Je m'inscris !</button></a>
+            {% endif %}
 
             <div class="input-group text-center">
-                <!--<div class="input-group-prepend">
+                {% if app.user != null %}
+                <div class="input-group-prepend">
                     <span class="input-group-text">Je cherche : </span>
                     <select class="combobox form-control">
                         <option value="pi">Peu importe</option>
@@ -40,11 +55,13 @@
                         <option value="bs">BabySitter</option>
                         <option value="gd">Des enfants à garder</option>
                     </select>
+                    <input type="text" class="form-control" aria-label="Où ?" placeholder="Où ?">
+                    <input type="text" class="form-control" aria-label="Quand ?" placeholder="Quand ?">
                 </div>
-
-                <input type="text" class="form-control" aria-label="Où ?" placeholder="Où ?">
-                <input type="text" class="form-control" aria-label="Quand ?" placeholder="Quand ?">-->
-
+                <div class="input-group-append">
+                    <input type="button" class="btn btn-success" value="Go !">
+                </div>
+            {% endif %}
             </div>
             <hr>
         </div>
@@ -55,20 +72,18 @@
 
         <div class="col-lg-6">
             <div class="jumbotron" style="opacity: 0.8">
-                <h2>Challenge !</h2>
-                <p>Mon deuxième article ! Je vous annonce la création d'une jolie première page ! Toute belle pour le Challenge ! </p>
+                <h2>Pré-Inscriptions ouvertes !</h2>
+                <p>Vous l'attendiez tous ! La pré-inscription est maintenant disponible ! Remplissez vite ce formulaire pour être au courant de l'avancée de VOTRE plateforme !</p>
                 <!--<p><a class="btn btn-success" href="#" role="button">Lire plus &raquo;</a></p>-->
             </div>
-
         </div>
         <div class="col-lg-6" >
             <div class="jumbotron" style="opacity: 0.8">
                 <h2>Le début d'une aventure !</h2>
-                <p>Voici mon premier article ! Il n'est peut être pas très grand, mais c'est un début. J'espère pouvoir commencer une grande aventure avec vous!</p>
+                <p>J'espère pouvoir commencer une grande aventure avec vous ! Êtes-vous prêt a me suivre ?</p>
                 <!--<p><a class="btn btn-success" href="#" role="button">Lire plus &raquo;</a></p>-->
             </div>
         </div>
-
         </div>
 
 {% endblock %}
