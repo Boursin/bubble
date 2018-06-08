@@ -1,0 +1,50 @@
+create:
+    register:
+        tab: "Inscription"
+        title: "Création du compte"
+        button: "Inscription"
+    edit:
+        title: "Modification du profil"
+        button: "Enregistrer"
+
+check:
+    captcha: "Veuillez cocher le captcha!"
+
+cgu:
+    name: "conditions générales d'utilisation"
+    check: "Veuillez cocher les "
+
+login:
+    title: "Connexion"
+    username: "Nom d'utlisateur"
+    password: "Mot de passe"
+    remember_me: "Se souvenir de moi"
+    submit: "Connexion"
+    facebook: "Se connecter avec Facebook"
+    google: "Se connecter avec Google"
+
+show:
+    user:
+        mail: "Adresse Mail"
+        username: "Nom d'utilisateur"
+        first_name: "Prénom"
+        last_name: "Nom"
+        gender: "Genre"
+        birthday: "Date de Naissance"
+        phone: "Téléphone"
+        country: "Pays"
+        city: "Ville"
+        postcode: "Code Postal"
+        street: "Rue"
+        biography: "Biographie"
+        facebook_profile_picture: "Photo de profil (Facebook ou Gmail)"
+        edit_profile: "Modifier mon profil"
+        return_to_profile: "Retourner à mon profil"
+        update: "Votre profil à été mis à jour !"
+        gravatar: "Votre gravatar :"
+        no_gravatar: "Aucun gravatar n'a été créé pour cette adresse mail."
+        change_gravatar: "Changez votre gravatar."
+        male: "Homme"
+        female: "Femme"
+        other: "Autre"
+        upload: "Importer"

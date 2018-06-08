@@ -3,10 +3,13 @@
 <div class="fos_user_user_show">
     <div class="row justify-content-center" style="margin-top: 10px;">
         <div class="jumbotron ">
+            <p>{{ 'show.user.gender'|trans }}: {{ ('show.user.'~user.gender)|trans }}</p>
             <p>{{ 'Prénom'|trans }}: {{ user.firstname }}</p>
             <p>{{ 'Nom'|trans }}: {{ user.lastname }}</p>
             <p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p>
             <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
+            <p>{{ 'Code postal'|trans }}: {{ user.postcode }}</p>
+            <p>{{ 'Date de naissance'|trans }}: {{ user.birthday|date("d/m/Y") }}</p>
         </div>
     </div>
 </div>

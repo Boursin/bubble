@@ -21,25 +21,29 @@ class User extends BaseUser
     protected $id;
 
     /**
-     * @var string
-     *
      * @ORM\Column(name="firstname", type="string")
      */
     protected $firstname;
 
     /**
-     * @var string
-     *
      * @ORM\Column(name="lastname", type="string")
      */
     protected $lastname;
 
     /**
-     * @var string
-     *
      * @ORM\Column(name="postcode", type="string")
      */
     protected $postcode;
+
+    /**
+     *@ORM\Column(name="gender", type="string", length=20, nullable=true)
+     */
+    protected $gender;
+
+    /**
+     * @ORM\Column(name="birthday", type="datetime", nullable=true)
+     */
+    protected $birthday;
 
 
     /**
@@ -112,5 +116,53 @@ class User extends BaseUser
     public function getPostcode()
     {
         return $this->postcode;
+    }
+
+    /**
+     * Set gender
+     *
+     * @param string $gender
+     *
+     * @return User
+     */
+    public function setGender($gender)
+    {
+        $this->gender = $gender;
+
+        return $this;
+    }
+
+    /**
+     * Get gender
+     *
+     * @return string
+     */
+    public function getGender()
+    {
+        return $this->gender;
+    }
+
+    /**
+     * Set birthday
+     *
+     * @param \DateTime $birthday
+     *
+     * @return User
+     */
+    public function setBirthday($birthday)
+    {
+        $this->birthday = $birthday;
+
+        return $this;
+    }
+
+    /**
+     * Get birthday
+     *
+     * @return \DateTime
+     */
+    public function getBirthday()
+    {
+        return $this->birthday;
     }
 }

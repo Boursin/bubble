@@ -1,0 +1,48 @@
+create:
+    register:
+        tab: "Registration"
+        title: "Account Creation"
+        button: "Register"
+    edit:
+        title: "Edit your profil"
+        button: "Submit"
+
+check:
+    captcha: "Please check the captcha box"
+
+cgu:
+    name: "general terms of use"
+    check: "Please check the "
+
+login:
+    title: "Login"
+    username: "Username"
+    password: "Password"
+    remember_me: "Remember Me"
+    submit: "Submit"
+    facebook: "Login with Facebook"
+    google: "Login with Google"
+
+show:
+    user:
+        mail: "Email Address"
+        username: "Username"
+        firstname: "First Name"
+        lastname: "Last Name"
+        gender: "Gender"
+        birthday: "Birth Day"
+        phone: "Phone Number"
+        country: "Country"
+        city: "City"
+        postcode: "Postcode"
+        street: "Street"
+        biography: "Biography"
+        facebook_profile_picture: "Profil picture (Facebook or Gmail)"
+        edit_profile: "Edit my profil"
+        update: "Your profil has been updated !"
+        gravatar: "Your gravatar :"
+        no_gravatar: "No gravatar has been created for this email."
+        change_gravatar: "Change your gravatar."
+        male: "Male"
+        female: "Female"
+        other: "Other"
